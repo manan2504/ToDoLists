@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- font-awesome-icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>To-Do List</title>
+</head>
+
+<body>
+    <div class="container">
+        <main>
+
+            <!-- UPPER-DIV -->
+            <div class="upperDiv">
+                <div class="rotate-div">
+                    <header>
+                        <h1>To Do</h1>
+                    </header>
+
+                    <!-- DATE -->
+                    <div class="full-date">
+
+                        <div class="dayYearMonth-Conti">
+                            <div class="day">01</div>
+                            <div class="yearAndMonths">
+                                <div class="month">January</div>
+                                <div class="year">2022</div>
+                            </div>
+                        </div>
+
+                        <div class="addNewList">
+                            <a class="todo-btn" style="font-size: 3rem;"><i style="color: white;"
+                                    class="fas fa-plus-circle"></i></a>
+                        </div>
+
+                        <div class="dayAndFilter">
+                            <div class="weekDay">Monday</div>
+
+                            <div class="custom-select">
+                                <select name="todos" id="todoFilter">
+                                    <option value="all">All</option>
+                                    <option value="completed">Completed</option>
+                                    <option value="uncompleted">Uncompleted</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- FORM FOR CREATING TO-DO LIST -->
+
+            <div id="dialogBox" class="modal">
+                <form class="dialogBox-content">
+                    <h3 class="formHeading">Add New Items in Your List</h3>
+                    <span class="close">&times;</span>
+                    <div class="todo-input-conti">
+
+                        <label for="heading">Heading</label>
+                        <input id="heading" placeholder="Write Heading.." type="text" name="todoHeading"
+                            class="todo-input" required>
+
+                        <label for="desc">Description</label>
+                        <input id="desc" placeholder="Write Description.." type="text" name="todoDesc"
+                            class="todo-input" required>
+                        <input type="submit" value="Add Item" class="addNewtodo-btn">
+                    </div>
+                </form>
+            </div>
+
+
+            <!-- LOWER-DIV -->
+            <div class="lowerDiv">
+                <!-- div for to-do's list container -->
+                <div class="inside-conti">
+                    <!--DIV FOR LIST  -->
+                    <div class="todo-conti">
+                        <!-- UL -->
+                        <ul class="todo-list">
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="https://www.linkedin.com/in/mananjai19/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin fa-lg"></i>
+        </a>
+        <a href="https://github.com/manan2504/ToDoLists.git" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github fa-lg"></i>
+        </a>
+
+    </footer>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

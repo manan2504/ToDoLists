@@ -1,0 +1,455 @@
+/*
+ ______________________________________________
+|                                              |
+|     DEFAULT BODY AND OTHER CSS TAG           |
+|______________________________________________|
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-theme: #0ed2f7;
+  --lightBlue-shade: #b2fefa;
+  --font-shade: #fff;
+  --main-fontColor: #03045e;
+  --main-blue: #4361ee;
+}
+
+body {
+  background-attachment: fixed !important;
+  height: 100%;
+  background-repeat: no-repeat;
+  background: var(--lightBlue-shade); /*  fallback for old browsers */
+  background: -webkit-linear-gradient(
+    315deg,
+    var(--blue-theme) 0,
+    var(--lightBlue-shade) 74%
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    315deg,
+    var(--blue-theme) 0,
+    var(--lightBlue-shade) 84%
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: var(--main-fontColor);
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin: -3rem 0rem;
+}
+
+a {
+  font-size: 1rem;
+  text-decoration: none;
+  margin: 0rem 0.5rem;
+}
+
+i {
+  color: var(--main-fontColor);
+  width: 1rem;
+  height: 1rem;
+}
+
+i:hover {
+  color: white;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 1rem;
+}
+
+/*
+ ______________________________________________
+|                                              |
+|              UTILITIES CLASS                 |
+|______________________________________________|
+
+*/
+
+.container {
+  width: 50.625rem;
+  margin: auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 34.375rem;
+  margin-bottom: 2rem;
+}
+
+.upperDiv {
+  position: relative;
+  width: 50.6rem;
+  background: #4361ee;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 1px 20px 0px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  height: 12.6875rem;
+  transform: rotate(180deg);
+  color: var(--font-shade);
+}
+
+.rotate-div {
+  transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.full-date {
+  display: flex;
+  flex-direction: row;
+  width: 50.6rem;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.dayYearMonth-Conti {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.dayAndFilter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.yearAndMonths {
+  margin: 0rem 0.7rem;
+}
+
+.day {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.month {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.year {
+  font-size: 1.2rem;
+}
+
+.weekDay {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.fa-plus-circle:before {
+  margin: -2.5rem;
+}
+
+.todo-btn {
+  cursor: pointer;
+}
+
+.lowerDiv {
+  width: 50.6rem;
+  background: #f1eff0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 1px 20px 0px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  min-height: 21.6875rem;
+  position: relative;
+}
+
+.inside-conti {
+  width: 80%;
+  background: #f8f8f8;
+  min-height: 364.8px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -2rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.todo {
+  min-height: 6rem;
+  width: 95%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: var(--font-shade);
+  margin: 0.7rem auto;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+}
+
+.todoCompleted {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.todoFallDelete {
+  transform: translateY(8rem) rotateZ(25deg);
+  opacity: 0;
+}
+
+.sidebarAndheading {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar {
+  min-width: 8px;
+  background-color: var(--main-blue);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.make-list {
+  margin-left: 1rem;
+  word-break: break-all;
+}
+
+.btn-div1 i {
+  padding: 0rem 0.2rem;
+}
+
+.btn-div2 i {
+  padding: 1rem 0.3rem;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn-div1,
+.btn-div2 {
+  width: 2.5rem;
+  height: 2.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  line-height: 2.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-div1 {
+  background: var(--blue-theme);
+  border-bottom-left-radius: 100%;
+}
+.btn-div1:hover {
+  background: #4ad66d;
+  color: white;
+}
+
+.btn-div2 {
+  background: var(--lightBlue-shade);
+  border-top-left-radius: 100%;
+}
+
+.btn-div2:hover {
+  background: #fd151b;
+  color: white;
+}
+
+.subject,
+.description {
+  margin: 0.7rem 0rem;
+  padding-right: 1rem;
+}
+
+/* FILTER BOX CSS */
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+  height: 2rem;
+}
+
+select {
+  width: 100%;
+  padding: 0.2rem;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 4px;
+  border-color: white;
+  box-sizing: border-box;
+  background-color: var(--font-shade);
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  cursor: pointer;
+  overflow: hidden;
+  color: var(--main-fontColor);
+}
+
+select:focus {
+  outline: none;
+}
+
+/* DIALOG BOX CSS */
+
+/* The Dialog-Box (background) */
+#dialogBox {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Dialog-Box Content */
+.dialogBox-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+.formHeading {
+  text-align: center;
+  color: var(--main-fontColor);
+  padding-bottom: 1rem;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: -2rem;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.todo-input-conti {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type='submit'] {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type='submit']:hover {
+  background-color: #45a049;
+}
+
+/*
+ ______________________________________________
+|                                              |
+|            MEDIA QUERIES CSS                 |
+|______________________________________________|
+*/
+
+@media screen and (max-width: 540px) {
+  .container {
+    width: 27.625rem;
+  }
+
+  .upperDiv {
+    width: 27.625rem;
+  }
+
+  .full-date {
+    width: 32.6rem;
+  }
+
+  .dialogBox-content {
+    width: 86%;
+  }
+
+  .lowerDiv {
+    width: 27.625rem;
+  }
+
+  .inside-conti {
+    width: 86%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 22.563rem;
+  }
+
+  .upperDiv {
+    width: 22.563rem;
+  }
+
+  .full-date {
+    width: 29.563rem;
+  }
+
+  .lowerDiv {
+    width: 22.563rem;
+  }
+
+  .day {
+    font-size: 2rem;
+  }
+
+  .month {
+    font-size: 1rem;
+  }
+
+  .fa-plus-circle:before {
+    margin: -1.5rem;
+  }
+}
